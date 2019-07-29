@@ -8,8 +8,7 @@
 
 echo "<div class=\"container-fluid\"><pre><code>";
 
-var_dump($_SESSION['items']);
-var_dump($items);
+echo session_id();
 
 echo "</pre></code></div>";
 

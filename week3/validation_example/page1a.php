@@ -23,10 +23,10 @@ if ($valid == false){
 }
 
 // now write code to do something with form data in $_POST here
-
+var_dump($_POST);
 
 session_write_close();
 
-header("Location: page2.php");
+//header("Location: page2.php");
 
 ?>
