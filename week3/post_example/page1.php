@@ -26,7 +26,7 @@
                     <label class="col-form-label" for="backgroundColor">Background Color</label> 
                 </div>
                 <div class="col">
-                    <input name="backgroundColor" type="color" value="#ffffff">
+                    <input name="backgroundColor" id="backgroundColor" type="color" value="#ffffff">
                 </div>
             </div>
             <div class="form-row">
@@ -34,7 +34,7 @@
                     <label class="col-form-label" for="headingColor">Heading Color</label>
                 </div>
                 <div class="col">
-                    <input name="headingColor" type="color" value="#000000"> 
+                    <input name="headingColor" id="headingColor" type="color" value="#000000"> 
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
