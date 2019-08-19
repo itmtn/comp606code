@@ -7,6 +7,8 @@ error_reporting(0);
 // so that it is never included in a source code repository
 // see https://www.w3schools.com/php/func_filesystem_parse_ini_file.asp
 // see https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+// if file is already included in local repo remove from local repo using
+// git rm --cached filename
 
 $config = parse_ini_file("config.ini");
 var_dump($config);

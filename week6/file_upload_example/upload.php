@@ -1,3 +1,4 @@
+!
 <?php
 
 ini_set('file_uploads', '1');
@@ -9,8 +10,6 @@ if (!isset($_FILES['images']['name'])) {
     exit(0);
 };
 
-var_dump($_FILES);
-exit(0);
 
 $numFiles = count($_FILES['images']['name']);
 for($i = 0; $i < $numFiles; $i++){
@@ -20,6 +19,7 @@ for($i = 0; $i < $numFiles; $i++){
 
     // for security, always include a check here to ensure the 
     // uploaded file is what you expect it to be`
+    
     move_uploaded_file($tmp, $target);    
 }
 
