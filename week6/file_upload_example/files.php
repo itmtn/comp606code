@@ -7,14 +7,11 @@
     <title>file uploads</title>
 </head>
 <body>
-    
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
 <p><label>Select images for upload: </label><input type="file" name="images[]" multiple></p>
 <input type="submit">
 </form>
-
-
 
 </body>
 </html>
