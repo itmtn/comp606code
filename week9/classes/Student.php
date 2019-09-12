@@ -1,17 +1,18 @@
-<?phpS
+<?php
 
-class Student {
+class Student{
 
-  private $name;
-  private $studentId;
-  private $email;
-  private $dob;
+  private $id = null;
+  private $name = "";
+  private $studentId = "";
+  private $email = "";
+  private $dob = null;
 
   public function __construct($name, $studentId, $email, $dob){
     $this->name = $name;
     $this->studentId = $studentId;
     $this->email = $email;
-    $this->dob
+    $this->dob = $dob;
   }
 
   public function setName($name){
