@@ -7,6 +7,9 @@
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
+CREATE DATABASE `proshop`;
+USE `proshop`;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
