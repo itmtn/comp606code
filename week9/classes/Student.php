@@ -12,7 +12,7 @@ class Student{
     $this->name = $name;
     $this->studentId = $studentId;
     $this->email = $email;
-    $this->dob = $dob;
+    $this->dob = date_create($dob);
   }
 
   public function setName($name){
@@ -39,6 +39,11 @@ class Student{
     return $result;
   }
 
+  public function setDob($dob){
+    // accepts string representing the date
+    $this->dob = date_create($dob);
+  }
+
   public function setEmail($email){
     // string, email format
     $result = true;
@@ -60,6 +65,11 @@ class Student{
 
   public function getEmail(){
     return $this->email;
+  }
+
+  public function getDob(){
+    // returns date of birth
+    return $this->dob;
   }
 
 }

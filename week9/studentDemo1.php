@@ -1,13 +1,10 @@
 <?php
 
-sp_audoload_register(
-    function($class_name){
-        include $class_name.'.php';
-    }
-)
+require "libs/inc_classes.php";
+
+$mark = new Student("mark", "0214578", "mark@gmail.com", "")
 
 
-
-
+//$name, $studentId, $email, $dob
 
 ?>
