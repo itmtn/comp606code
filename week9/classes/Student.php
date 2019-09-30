@@ -1,5 +1,16 @@
 <?php
 
+
+//
+// student table
+// id int autoincrement primary key
+// name varchar 
+// studentId varchar
+// email varchar
+// dob date
+//
+//
+
 class Student{
 
   private $id = null;
@@ -15,6 +26,24 @@ class Student{
     $this->email = $email;
     $this->dob = date_create($dob);
   }
+
+  public static function create($name, $studentId, $email, $dob){
+    // take parameters and insert a new student record 
+    // into the student table
+    // THEN retrieve the value of the id field from the database
+    // create a new student object instance with these values
+    // and return it from this method
+  }
+
+  public static function find($id){
+    // search students table and locate record
+    // get that record and create student object 
+    // return student object OR null if we cannot find it
+    return $student;
+  }
+
+
+
 
   // ------ setter methods -------
   public function setName($name){
