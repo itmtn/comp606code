@@ -1,7 +1,9 @@
 <?php
 
-class Student{
+class Student {
 
+  // private properties of this class
+  // cannot be 
   private $id = null;
   private $name = "";
   private $studentId = "";
@@ -40,7 +42,7 @@ class Student{
   }
 
   public function setDob($dob){
-    // accepts string representing the date
+    // accepts string representing the date and creates a date 
     $this->dob = date_create($dob);
   }
 
@@ -68,7 +70,7 @@ class Student{
   }
 
   public function getDob(){
-    // returns date of birth
+    // returns date of birth as a date object
     return $this->dob;
   }
 

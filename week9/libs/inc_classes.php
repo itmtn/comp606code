@@ -1,3 +1,6 @@
+<?php
 
-require "../classes/Student.php";
-require "../classes/Students.php";
+require "classes/Student.php";
+require "classes/Students.php";
+
+?>
