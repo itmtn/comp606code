@@ -1,6 +1,21 @@
 <?php
 
+<<<<<<< HEAD
 class Student {
+=======
+
+//
+// student table
+// id int autoincrement primary key
+// name varchar 
+// studentId varchar
+// email varchar
+// dob date
+//
+//
+
+class Student{
+>>>>>>> 4fc0fd91dba2ed0d2f8a79644ba7d89b2a33923d
 
   // private properties of this class
   // cannot be 
@@ -10,6 +25,7 @@ class Student {
   private $email = "";
   private $dob = null;
 
+  // constructor to create new student object
   public function __construct($name, $studentId, $email, $dob){
     $this->name = $name;
     $this->studentId = $studentId;
@@ -17,8 +33,26 @@ class Student {
     $this->dob = date_create($dob);
   }
 
+  public static function create($name, $studentId, $email, $dob){
+    // take parameters and insert a new student record 
+    // into the student table
+    // THEN retrieve the value of the id field from the database
+    // create a new student object instance with these values
+    // and return it from this method
+  }
+
+  public static function find($id){
+    // search students table and locate record
+    // get that record and create student object 
+    // return student object OR null if we cannot find it
+    return $student;
+  }
+
+
+
+
+  // ------ setter methods -------
   public function setName($name){
-    // string
     $result = true;
     if (is_string($name)){
       $this->name = $name;
@@ -26,18 +60,12 @@ class Student {
     return $result;
   }
 
-  public function setStudentId($studentId){
-    // string, exactly 8 characters
-    $result = true;
-    if (is_string($studentId)) {
-      if (strlen($studentId) == 8){
-        $this->studentId = $studentId;
-      } else {
-        $result = false;
-      }
-    } else {
-      $result = false;
-    }
+  public function setStudentId($studentId): bool{
+    $result = false;
+    if (is_string($studentId) && strlen($studentId) == 8){
+      $this->studentId = $studentId;
+      $result = true;
+    } 
     return $result;
   }
 
@@ -57,6 +85,7 @@ class Student {
     return $result;
   }  
 
+  // ------- getter methods ----------
   public function getName(){    
     return $this->name;
   }
@@ -70,8 +99,18 @@ class Student {
   }
 
   public function getDob(){
+<<<<<<< HEAD
     // returns date of birth as a date object
+=======
+>>>>>>> 4fc0fd91dba2ed0d2f8a79644ba7d89b2a33923d
     return $this->dob;
+  }
+
+  // method for debugging  object instance
+  public function debug(){
+    echo "<pre><code>";
+    var_dump($this);
+    echo "</code></pre>";
   }
 
 }

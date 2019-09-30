@@ -7,7 +7,7 @@ class Collection {
     public function add($key, $record){
         $result = false;
         if ($key != null) {
-            $records[$key] = $record;
+            $this->records[$key] = $record;
             $result = true;
         }
         return $result;
@@ -19,12 +19,18 @@ class Collection {
 
     public function update($key, $record){
         if (array_key_exists($key, $this->records)){
-            $records[$key] = $record;
+            $this->$records[$key] = $record;
         }
     }
  
     public function get($key){
-        return $records[$key];
+        return $this->$records[$key];
+    }
+
+    public function debug(){
+        echo "<pre><code>";
+        var_dump($this);
+        echo "</code></pre>";
     }
 
 }
