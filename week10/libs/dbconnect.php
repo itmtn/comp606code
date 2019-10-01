@@ -9,8 +9,8 @@ $host = "localhost";
 
 $mysqli = mysqli_connect($host, $user, $password, $database);
 if ($mysqli == false){
-  echo "<h1>unable to make database connection</h1>";
-  exit(0);
+    echo "<h2>Site is down</h2>";
+    exit(0);
 }
 
 $mysqli->autocommit(true);

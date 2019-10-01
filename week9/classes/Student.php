@@ -44,9 +44,6 @@ class Student{
     return $student;
   }
 
-
-
-
   // ------ setter methods -------
   public function setName($name){
     $result = true;
