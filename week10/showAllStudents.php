@@ -4,15 +4,15 @@ require_once("header.php");
 
 $students = Student::getAll($mysqli);
 
-echo "<table>";
+echo "<table>\n";
 foreach($students->getRecords() as $id => $student){
-    echo "<tr>";
-    echo "<td>".$student->getStudentId()."</td>";
-    echo "<td>".$student->getName()."</td>";
-    echo "<td><a href=\"showStudentDetail.php?id=".$student->getId()."\">View</a></td>";
-    echo "</tr>";
+    echo "<tr>\n";
+    echo "<td>".$student->getStudentId()."</td>\n";
+    echo "<td>".$student->getName()."</td>\n";
+    echo "<td><a href=\"showStudentDetail.php?id=".$student->getId()."\">View</a></td>\n";
+    echo "</tr>\n";
 }
-echo "</table>";
+echo "</table>\n";
 
 
 require_once("footer.php");
