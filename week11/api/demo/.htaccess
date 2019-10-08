@@ -1,0 +1,10 @@
+   # the rewrite will only apply to the directory that this .htaccess file is placed in
+   # it expects to be placed in http://localhost/api/demo/
+      
+   RewriteEngine On
+   RewriteBase /
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   
+   # request is rewritten - request will go to http://localhost/api/demo/index.php
+   RewriteRule ^(.+)$ /api/demo/index.php/$1 [L,QSA]
